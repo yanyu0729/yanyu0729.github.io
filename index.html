@@ -1,66 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yanyu Wang</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yanyu Wang | Environmental Scientist</title>
 
   <style>
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      background: #f5f7fa;
-      color: #222;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background: #f7f8f5;
+      color: #1f2933;
     }
 
-    .card {
-      text-align: center;
-      background: white;
-      padding: 60px;
-      border-radius: 18px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-      max-width: 700px;
+    header {
+      padding: 40px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+      padding: 40px 8% 80px;
+    }
+
+    .eyebrow {
+      color: #2f6f4e;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 14px;
     }
 
     h1 {
-      font-size: 52px;
-      margin-bottom: 10px;
+      font-size: 56px;
+      line-height: 1.05;
+      margin: 20px 0;
+      max-width: 850px;
     }
 
-    h2 {
-      font-weight: 400;
-      color: #666;
-      margin-top: 0;
+    .subtitle {
+      font-size: 24px;
+      color: #475569;
+      line-height: 1.5;
+      max-width: 720px;
     }
 
-    p {
+    .name {
+      margin-top: 36px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .role {
+      color: #64748b;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .buttons {
+      margin-top: 32px;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 0 12px 12px 0;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: #1f3d2b;
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .buttons a.secondary {
+      background: white;
+      color: #1f3d2b;
+      border: 1px solid #cbd5c0;
+    }
+
+    .photo-card {
+      background: white;
+      padding: 18px;
+      border-radius: 28px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+    }
+
+    .photo-card img {
+      width: 100%;
+      border-radius: 22px;
+      display: block;
+    }
+
+    section {
+      padding: 80px 8%;
+    }
+
+    .section-title {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .questions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
       font-size: 20px;
-      line-height: 1.7;
+      line-height: 1.45;
+    }
+
+    .mission {
+      background: #1f3d2b;
+      color: white;
+      border-radius: 30px;
+      padding: 60px;
+      font-size: 28px;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 40px 8%;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .questions {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="card">
+<header>
+  <strong>Yanyu Wang</strong>
+  <nav>
+    <a href="#research">Research</a>
+    <a href="#questions">Questions</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
-<h1>Yanyu Wang</h1>
+<main>
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Sustainable Agriculture & Food Systems</div>
 
-<h2>Environmental Scientist</h2>
+      <h1>How can agriculture feed a growing population while reducing environmental impacts?</h1>
 
-<p>
-Welcome to my personal website.
-</p>
+      <p class="subtitle">
+        I develop science-based solutions for sustainable agriculture by integrating
+        systems modeling, geospatial analysis, nutrient budgeting, and stakeholder engagement.
+      </p>
 
-<p>
-🚧 This website is currently under construction.
-</p>
+      <div class="name">Yanyu Wang, Ph.D.</div>
+      <div class="role">
+        Environmental Scientist<br>
+        Sustainable Agriculture & Food Systems
+      </div>
 
-</div>
+      <div class="buttons">
+        <a href="CV_Yanyu_Wang.pdf">CV</a>
+        <a class="secondary" href="https://scholar.google.com/citations?user=sYjO7yQAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a class="secondary" href="https://orcid.org/0000-0002-0405-9822" target="_blank">ORCID</a>
+        <a class="secondary" href="https://www.linkedin.com/in/yanyu-wang-34884316b/" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="photo-card">
+      <img src="headshot.jpg" alt="Portrait of Yanyu Wang">
+    </div>
+  </section>
+
+  <section id="research">
+    <h2 class="section-title">Research</h2>
+    <p class="subtitle">
+      My research examines how agricultural systems can produce food while minimizing
+      nitrogen losses, greenhouse gas emissions, and broader environmental impacts.
+    </p>
+  </section>
+
+  <section id="questions">
+    <h2 class="section-title">Research Questions</h2>
+
+    <div class="questions">
+      <div class="card">
+        How can agriculture feed a growing population while reducing environmental impacts?
+      </div>
+
+      <div class="card">
+        How can nutrient circularity improve sustainability?
+      </div>
+
+      <div class="card">
+        How can science support evidence-based agricultural policy?
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="mission">
+      I believe agriculture can produce enough food for a growing population while protecting environmental systems.
+      My research aims to provide the scientific evidence needed to make that future possible.
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  © 2026 Yanyu Wang · Environmental Scientist · Sustainable Agriculture & Food Systems
+</footer>
 
 </body>
 </html>
