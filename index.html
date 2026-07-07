@@ -79,6 +79,16 @@
       line-height: 1.6;
     }
 
+    .role a {
+      color: #1f3d2b;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .role a:hover {
+      text-decoration: underline;
+    }
+
     .buttons {
       margin-top: 34px;
     }
@@ -114,46 +124,6 @@
       display: block;
     }
 
-    section {
-      padding: 80px 8%;
-    }
-
-    .section-title {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-      margin-top: 36px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      font-size: 18px;
-      line-height: 1.5;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      font-size: 22px;
-      color: #1f3d2b;
-    }
-
-    .mission {
-      background: #1f3d2b;
-      color: white;
-      border-radius: 30px;
-      padding: 60px;
-      font-size: 27px;
-      line-height: 1.5;
-    }
-
     footer {
       padding: 40px 8%;
       color: #64748b;
@@ -181,10 +151,6 @@
       h1 {
         font-size: 42px;
       }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
@@ -195,12 +161,11 @@
   <strong>Yanyu Wang</strong>
   <nav>
     <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#news">News</a>
-    <a href="#library">Library</a>
-    <a href="#contact">Contact</a>
+    <a href="about.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="news.html">News</a>
+    <a href="library.html">Library</a>
   </nav>
 </header>
 
@@ -218,8 +183,9 @@
 
       <div class="role">
         <strong>Yanyu Wang, Ph.D.</strong><br>
-        Sustainable Agriculture & Food Systems<br>
-        Postdoctoral Fellow, Georgetown University Earth Commons
+        Sustainable Agriculture &amp; Food Systems<br>
+        Postdoctoral Fellow, Georgetown University Earth Commons<br>
+        ✉️ <a href="mailto:yw1359@georgetown.edu">yw1359@georgetown.edu</a>
       </div>
 
       <div class="buttons">
@@ -234,71 +200,10 @@
       <img src="headshot.jpg" alt="Portrait of Yanyu Wang">
     </div>
   </section>
-
-  <section id="about">
-    <h2 class="section-title">About</h2>
-    <p class="subtitle">
-      I am an environmental scientist working at the intersection of sustainable agriculture,
-      nitrogen management, nutrient circularity, and food systems. My work aims to generate
-      scientific evidence that supports more sustainable and resilient agri-food systems.
-    </p>
-  </section>
-
-  <section id="research">
-    <h2 class="section-title">Research</h2>
-    <p class="subtitle">
-      My research is organized around three connected themes.
-    </p>
-
-    <div class="cards">
-      <div class="card">
-        <h3>Sustainable Agriculture & Food Systems</h3>
-        <p>How can agriculture feed a growing population while reducing environmental impacts?</p>
-      </div>
-
-      <div class="card">
-        <h3>Nutrient Circularity</h3>
-        <p>How can nutrient circularity improve agricultural sustainability?</p>
-      </div>
-
-      <div class="card">
-        <h3>Science for Decision-Making</h3>
-        <p>How can science support evidence-based agricultural policy?</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="publications">
-    <h2 class="section-title">Publications</h2>
-    <p class="subtitle">
-      Selected publications and research outputs will be added here.
-    </p>
-  </section>
-
-  <section id="news">
-    <h2 class="section-title">News</h2>
-    <p class="subtitle">
-      Updates on publications, talks, awards, collaborations, and professional milestones.
-    </p>
-  </section>
-
-  <section id="library">
-    <h2 class="section-title">Library</h2>
-    <p class="subtitle">
-      Books, papers, reports, and ideas that continue to shape my thinking.
-    </p>
-  </section>
-
-  <section>
-    <div class="mission">
-      I believe agriculture can produce enough food for a growing population while protecting environmental systems.
-      My research aims to provide the scientific evidence needed to make that future possible.
-    </div>
-  </section>
 </main>
 
-<footer id="contact">
-  © 2026 Yanyu Wang · Environmental Scientist · Sustainable Agriculture & Food Systems
+<footer>
+  © 2026 Yanyu Wang · Environmental Scientist · Sustainable Agriculture &amp; Food Systems
 </footer>
 
 </body>
