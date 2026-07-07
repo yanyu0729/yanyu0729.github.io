@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>News | Yanyu Wang</title>
+  <title>Library | Yanyu Wang</title>
 
   <style>
     body {
@@ -56,24 +56,33 @@
       font-size: 20px;
       color: #64748b;
       margin-bottom: 48px;
+      max-width: 760px;
+      line-height: 1.6;
     }
 
-    .news-card {
+    .library-card {
       background: white;
       border-radius: 28px;
       padding: 44px;
       box-shadow: 0 18px 50px rgba(0,0,0,0.08);
-      max-width: 1200px;
+      max-width: 1100px;
     }
 
-    .news-top {
+    .book-entry {
       display: grid;
-      grid-template-columns: 1fr 0.9fr;
+      grid-template-columns: 0.75fr 1.25fr;
       gap: 48px;
       align-items: center;
     }
 
-    .date {
+    .book-photo img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+    }
+
+    .label {
       display: inline-block;
       background: #dcece2;
       color: #1f3d2b;
@@ -85,55 +94,30 @@
     }
 
     h2 {
-      font-size: 36px;
-      margin: 0 0 10px;
+      font-size: 38px;
+      margin: 0 0 8px;
     }
 
-    .institution {
+    .author {
       color: #2f6f4e;
       font-size: 18px;
       font-weight: 600;
       margin-bottom: 24px;
     }
 
+    .quote {
+      font-size: 22px;
+      line-height: 1.6;
+      color: #1f3d2b;
+      margin: 26px 0;
+      padding-left: 22px;
+      border-left: 4px solid #dcece2;
+    }
+
     p {
       font-size: 18px;
       line-height: 1.7;
       color: #334155;
-    }
-
-    .main-photo img,
-    .gallery img {
-      width: 100%;
-      display: block;
-      border-radius: 20px;
-      object-fit: cover;
-    }
-
-    .main-photo img {
-      max-height: 520px;
-      object-position: center;
-    }
-
-    .gallery {
-      border-top: 1px solid #e5e7eb;
-      margin-top: 44px;
-      padding-top: 28px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .gallery img {
-      height: 220px;
-    }
-
-    .caption {
-      text-align: center;
-      font-size: 15px;
-      color: #475569;
-      margin-top: 10px;
-      line-height: 1.5;
     }
 
     footer {
@@ -164,20 +148,12 @@
         font-size: 42px;
       }
 
-      .news-card {
+      .library-card {
         padding: 28px;
       }
 
-      .news-top {
+      .book-entry {
         grid-template-columns: 1fr;
-      }
-
-      .gallery {
-        grid-template-columns: 1fr;
-      }
-
-      .gallery img {
-        height: auto;
       }
     }
   </style>
@@ -192,63 +168,52 @@
     <a href="about.html">About</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
-    <a class="active" href="news.html">News</a>
-    <a href="library.html">Library</a>
+    <a href="news.html">News</a>
+    <a class="active" href="library.html">Library</a>
   </nav>
 </header>
 
 <main>
-  <h1>News</h1>
-  <p class="subtitle">Updates on achievements, activities, and milestones.</p>
+  <h1>Library</h1>
+  <p class="subtitle">
+    Books, papers, reports, and ideas that continue to shape my thinking as an environmental scientist.
+  </p>
 
-  <article class="news-card">
-    <div class="news-top">
+  <article class="library-card">
+    <div class="book-entry">
+      <div class="book-photo">
+        <img src="pig-years.jpg" alt="Book cover of Pig Years by Ellyn Gaydos">
+      </div>
+
       <div>
-        <span class="date">May 2026</span>
+        <span class="label">Currently Reading</span>
 
-        <h2>Ph.D. Defense & Graduation</h2>
+        <h2><em>Pig Years</em></h2>
+        <div class="author">Ellyn Gaydos</div>
 
-        <div class="institution">
-          University of Maryland Center for Environmental Science
+        <div class="quote">
+          Understanding agriculture begins with understanding the people who live it every day.
         </div>
 
         <p>
-          In May 2026, I successfully defended my Ph.D. dissertation and officially
-          graduated with a Ph.D. in Marine Estuarine Environmental Sciences.
+          <em>Pig Years</em> offers an intimate perspective on farming life through the experiences
+          of Ellyn Gaydos. Rather than focusing solely on agricultural production, the book explores
+          the relationships, uncertainties, and everyday realities that shape farming communities.
         </p>
 
         <p>
-          I am deeply grateful to my advisors, committee members, collaborators,
-          lab members, family, and friends for their mentorship and support
-          throughout this journey.
+          As someone researching sustainable agriculture and food systems, I appreciate how this book
+          reminds us that behind every dataset are real people making complex decisions. While my work
+          often focuses on nutrient cycles, environmental impacts, and systems-level analyses,
+          <em>Pig Years</em> reinforces the importance of understanding agriculture through the lived
+          experiences of farmers.
         </p>
 
         <p>
-          This milestone marks the end of an exciting chapter and the beginning
-          of my next chapter as a Postdoctoral Fellow at Georgetown University
-          Earth Commons.
+          It is a powerful reminder that meaningful, science-based solutions should not only be
+          environmentally and economically sound, but also practical and grounded in the realities of
+          the people who steward our agricultural landscapes.
         </p>
-      </div>
-
-      <div class="main-photo">
-        <img src="graduation-main.jpg" alt="Yanyu Wang at graduation ceremony">
-      </div>
-    </div>
-
-    <div class="gallery">
-      <div>
-        <img src="graduation-advisors.jpg" alt="Yanyu Wang with advisors and committee members">
-        <div class="caption">With advisors and committee members at the graduation ceremony.</div>
-      </div>
-
-      <div>
-        <img src="defense-presentation.jpg" alt="Yanyu Wang during Ph.D. defense presentation">
-        <div class="caption">During my Ph.D. defense presentation.</div>
-      </div>
-
-      <div>
-        <img src="graduation-celebration.jpg" alt="Yanyu Wang celebrating with lab members and collaborators">
-        <div class="caption">Celebrating with lab members and collaborators.</div>
       </div>
     </div>
   </article>
