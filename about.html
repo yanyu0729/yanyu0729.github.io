@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Yanyu Wang</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background: #f7f8f5;
+      color: #1f2933;
+    }
+
+    header {
+      padding: 28px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(247, 248, 245, 0.9);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+
+    header strong { font-size: 18px; }
+
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: #334155;
+      font-weight: 500;
+      font-size: 15px;
+    }
+
+    nav a:hover,
+    nav a.active { color: #1f3d2b; }
+
+    main {
+      padding: 70px 8% 90px;
+    }
+
+    h1 {
+      font-size: 56px;
+      margin-bottom: 12px;
+      color: #1f3d2b;
+    }
+
+    .subtitle {
+      font-size: 20px;
+      color: #64748b;
+      margin-bottom: 48px;
+      max-width: 800px;
+      line-height: 1.6;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 28px;
+      padding: 44px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+      max-width: 1100px;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 0;
+      color: #1f3d2b;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.75;
+      color: #334155;
+    }
+
+    .map-box {
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.10);
+      background: #eef3ed;
+    }
+
+    iframe {
+      width: 100%;
+      height: 360px;
+      border: 0;
+      display: block;
+    }
+
+    .map-caption {
+      padding: 14px 18px;
+      font-size: 14px;
+      color: #64748b;
+      background: white;
+      line-height: 1.5;
+    }
+
+    .timeline {
+      margin-top: 50px;
+      border-top: 1px solid #e5e7eb;
+      padding-top: 34px;
+    }
+
+    .timeline-item {
+      margin-bottom: 28px;
+    }
+
+    .year {
+      display: inline-block;
+      background: #dcece2;
+      color: #1f3d2b;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item h3 {
+      margin: 6px 0;
+      font-size: 22px;
+    }
+
+    .timeline-item p {
+      margin-top: 6px;
+    }
+
+    footer {
+      padding: 40px 8%;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      header { display: block; }
+
+      nav { margin-top: 16px; }
+
+      nav a {
+        display: inline-block;
+        margin: 0 14px 10px 0;
+      }
+
+      main { padding-top: 40px; }
+
+      h1 { font-size: 42px; }
+
+      .about-card { padding: 28px; }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <strong>Yanyu Wang</strong>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="about.html">About</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="news.html">News</a>
+    <a href="library.html">Library</a>
+  </nav>
+</header>
+
+<main>
+  <h1>About</h1>
+  <p class="subtitle">
+    My path into environmental science began with a personal awareness of how economic development,
+    livelihoods, and environmental quality are deeply connected.
+  </p>
+
+  <article class="about-card">
+    <div class="intro-grid">
+      <div>
+        <h2>From Ma’anshan to Environmental Science</h2>
+
+        <p>
+          I grew up in Ma’anshan, a heavily industrialized city in eastern China along the Yangtze River.
+          The city’s development has long been shaped by steel production and mineral resources, which
+          supported local livelihoods while also raising important questions about environmental quality,
+          public health, and sustainable development.
+        </p>
+
+        <p>
+          Growing up in this context helped me understand that environmental challenges are rarely separate
+          from people’s lives. Industry provided jobs and stability for many families, including my own, while
+          also making visible the environmental costs of development. This early experience shaped my interest
+          in how societies can balance economic opportunity with environmental protection.
+        </p>
+
+        <p>
+          My academic path later brought me to Colorado State University through a 2+2 undergraduate program,
+          where I was introduced to an academic culture that emphasized critical thinking, interdisciplinary
+          problem-solving, and systems approaches to environmental questions. That experience became an
+          important turning point in my journey toward sustainable agriculture and food systems research.
+        </p>
+      </div>
+
+      <div class="map-box">
+        <iframe
+          src="https://www.google.com/maps?q=Maanshan%2C%20Anhui%2C%20China&output=embed"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+        <div class="map-caption">
+          Ma’anshan, Anhui Province, China — the city where I grew up.
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="year">Undergraduate</span>
+        <h3>Colorado State University</h3>
+        <p>
+          I continued my undergraduate studies in Ecosystem Science and Sustainability, where I became
+          increasingly interested in agricultural sustainability, ecosystem modeling, and the links between
+          environmental science and decision-making.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="year">M.S.</span>
+        <h3>Emory University</h3>
+        <p>
+          At Emory, I studied environmental sciences and worked on agricultural greenhouse gas emissions
+          under different cover crop systems.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="year">Ph.D.</span>
+        <h3>University of Maryland Center for Environmental Science</h3>
+        <p>
+          My doctoral research focused on nitrogen management, nutrient circularity, and sustainable
+          agri-food systems in the United States and China.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <span class="year">Current</span>
+        <h3>Georgetown University Earth Commons</h3>
+        <p>
+          I am now a Postdoctoral Fellow at Georgetown University Earth Commons, where I continue to study
+          sustainable agriculture, food systems, and science-based strategies for environmental decision-making.
+        </p>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer>
+  © 2026 Yanyu Wang · Environmental Scientist · Sustainable Agriculture &amp; Food Systems
+</footer>
+
+</body>
+</html>
