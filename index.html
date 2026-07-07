@@ -14,26 +14,40 @@
     }
 
     header {
-      padding: 40px 8%;
+      padding: 28px 8%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgba(247, 248, 245, 0.9);
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(12px);
+      z-index: 10;
+    }
+
+    header strong {
+      font-size: 18px;
     }
 
     nav a {
-      margin-left: 24px;
+      margin-left: 22px;
       text-decoration: none;
       color: #334155;
       font-weight: 500;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      color: #1f3d2b;
     }
 
     .hero {
-      min-height: 80vh;
+      min-height: 82vh;
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 60px;
       align-items: center;
-      padding: 40px 8% 80px;
+      padding: 40px 8% 90px;
     }
 
     .eyebrow {
@@ -45,33 +59,28 @@
     }
 
     h1 {
-      font-size: 56px;
+      font-size: 62px;
       line-height: 1.05;
       margin: 20px 0;
       max-width: 850px;
     }
 
     .subtitle {
-      font-size: 24px;
+      font-size: 22px;
       color: #475569;
-      line-height: 1.5;
+      line-height: 1.6;
       max-width: 720px;
     }
 
-    .name {
-      margin-top: 36px;
-      font-size: 22px;
-      font-weight: 700;
-    }
-
     .role {
+      margin-top: 28px;
       color: #64748b;
       font-size: 18px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     .buttons {
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
     .buttons a {
@@ -114,7 +123,7 @@
       margin-bottom: 20px;
     }
 
-    .questions {
+    .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 24px;
@@ -126,8 +135,14 @@
       padding: 30px;
       border-radius: 24px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-      font-size: 20px;
-      line-height: 1.45;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #1f3d2b;
     }
 
     .mission {
@@ -135,7 +150,7 @@
       color: white;
       border-radius: 30px;
       padding: 60px;
-      font-size: 28px;
+      font-size: 27px;
       line-height: 1.5;
     }
 
@@ -145,7 +160,20 @@
       font-size: 14px;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 900px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        margin-top: 16px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0 14px 10px 0;
+      }
+
       .hero {
         grid-template-columns: 1fr;
       }
@@ -154,7 +182,7 @@
         font-size: 42px;
       }
 
-      .questions {
+      .cards {
         grid-template-columns: 1fr;
       }
     }
@@ -166,28 +194,32 @@
 <header>
   <strong>Yanyu Wang</strong>
   <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
     <a href="#research">Research</a>
-    <a href="#questions">Questions</a>
+    <a href="#publications">Publications</a>
+    <a href="#news">News</a>
+    <a href="#library">Library</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<main>
+<main id="home">
   <section class="hero">
     <div>
-      <div class="eyebrow">Sustainable Agriculture & Food Systems</div>
+      <div class="eyebrow">Environmental Scientist</div>
 
-      <h1>How can agriculture feed a growing population while reducing environmental impacts?</h1>
+      <h1>Building science-based solutions for sustainable agriculture and resilient food systems.</h1>
 
       <p class="subtitle">
-        I develop science-based solutions for sustainable agriculture by integrating
-        systems modeling, geospatial analysis, nutrient budgeting, and stakeholder engagement.
+        I study sustainable agriculture and food systems through systems modeling,
+        geospatial analysis, nutrient budgeting, and stakeholder engagement.
       </p>
 
-      <div class="name">Yanyu Wang, Ph.D.</div>
       <div class="role">
-        Environmental Scientist<br>
-        Sustainable Agriculture & Food Systems
+        <strong>Yanyu Wang, Ph.D.</strong><br>
+        Sustainable Agriculture & Food Systems<br>
+        Postdoctoral Fellow, Georgetown University Earth Commons
       </div>
 
       <div class="buttons">
@@ -203,30 +235,58 @@
     </div>
   </section>
 
-  <section id="research">
-    <h2 class="section-title">Research</h2>
+  <section id="about">
+    <h2 class="section-title">About</h2>
     <p class="subtitle">
-      My research examines how agricultural systems can produce food while minimizing
-      nitrogen losses, greenhouse gas emissions, and broader environmental impacts.
+      I am an environmental scientist working at the intersection of sustainable agriculture,
+      nitrogen management, nutrient circularity, and food systems. My work aims to generate
+      scientific evidence that supports more sustainable and resilient agri-food systems.
     </p>
   </section>
 
-  <section id="questions">
-    <h2 class="section-title">Research Questions</h2>
+  <section id="research">
+    <h2 class="section-title">Research</h2>
+    <p class="subtitle">
+      My research is organized around three connected themes.
+    </p>
 
-    <div class="questions">
+    <div class="cards">
       <div class="card">
-        How can agriculture feed a growing population while reducing environmental impacts?
+        <h3>Sustainable Agriculture & Food Systems</h3>
+        <p>How can agriculture feed a growing population while reducing environmental impacts?</p>
       </div>
 
       <div class="card">
-        How can nutrient circularity improve sustainability?
+        <h3>Nutrient Circularity</h3>
+        <p>How can nutrient circularity improve agricultural sustainability?</p>
       </div>
 
       <div class="card">
-        How can science support evidence-based agricultural policy?
+        <h3>Science for Decision-Making</h3>
+        <p>How can science support evidence-based agricultural policy?</p>
       </div>
     </div>
+  </section>
+
+  <section id="publications">
+    <h2 class="section-title">Publications</h2>
+    <p class="subtitle">
+      Selected publications and research outputs will be added here.
+    </p>
+  </section>
+
+  <section id="news">
+    <h2 class="section-title">News</h2>
+    <p class="subtitle">
+      Updates on publications, talks, awards, collaborations, and professional milestones.
+    </p>
+  </section>
+
+  <section id="library">
+    <h2 class="section-title">Library</h2>
+    <p class="subtitle">
+      Books, papers, reports, and ideas that continue to shape my thinking.
+    </p>
   </section>
 
   <section>
