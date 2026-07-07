@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yanyu Wang | Environmental Scientist</title>
+  <title>News | Yanyu Wang</title>
 
   <style>
     body {
@@ -37,93 +37,103 @@
       font-size: 15px;
     }
 
-    nav a:hover {
+    nav a:hover,
+    nav a.active {
       color: #1f3d2b;
     }
 
-    .hero {
-      min-height: 82vh;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 60px;
-      align-items: center;
-      padding: 40px 8% 90px;
-    }
-
-    .eyebrow {
-      color: #2f6f4e;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 14px;
+    main {
+      padding: 70px 8% 90px;
     }
 
     h1 {
-      font-size: 62px;
-      line-height: 1.05;
-      margin: 20px 0;
-      max-width: 850px;
+      font-size: 56px;
+      margin-bottom: 12px;
+      color: #1f3d2b;
     }
 
     .subtitle {
-      font-size: 22px;
-      color: #475569;
-      line-height: 1.6;
-      max-width: 720px;
-    }
-
-    .role {
-      margin-top: 28px;
+      font-size: 20px;
       color: #64748b;
-      font-size: 18px;
-      line-height: 1.6;
+      margin-bottom: 48px;
     }
 
-    .role a {
-      color: #1f3d2b;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .role a:hover {
-      text-decoration: underline;
-    }
-
-    .buttons {
-      margin-top: 34px;
-    }
-
-    .buttons a {
-      display: inline-block;
-      margin: 0 12px 12px 0;
-      padding: 12px 18px;
-      border-radius: 999px;
-      text-decoration: none;
+    .news-card {
       background: white;
-      color: #1f3d2b;
-      border: 1px solid #cbd5c0;
-      font-weight: 600;
-      font-size: 15px;
-      transition: all 0.2s ease;
-    }
-
-    .buttons a:hover {
-      background: #1f3d2b;
-      color: white;
-      border-color: #1f3d2b;
-    }
-
-    .photo-card {
-      background: white;
-      padding: 18px;
       border-radius: 28px;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.10);
+      padding: 44px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.08);
+      max-width: 1200px;
     }
 
-    .photo-card img {
+    .news-top {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .date {
+      display: inline-block;
+      background: #dcece2;
+      color: #1f3d2b;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin: 0 0 10px;
+    }
+
+    .institution {
+      color: #2f6f4e;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #334155;
+    }
+
+    .main-photo img,
+    .gallery img {
       width: 100%;
-      border-radius: 22px;
       display: block;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .main-photo img {
+      max-height: 520px;
+      object-position: center;
+    }
+
+    .gallery {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 44px;
+      padding-top: 28px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .gallery img {
+      height: 220px;
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 15px;
+      color: #475569;
+      margin-top: 10px;
+      line-height: 1.5;
     }
 
     footer {
@@ -146,12 +156,28 @@
         margin: 0 14px 10px 0;
       }
 
-      .hero {
-        grid-template-columns: 1fr;
+      main {
+        padding-top: 40px;
       }
 
       h1 {
         font-size: 42px;
+      }
+
+      .news-card {
+        padding: 28px;
+      }
+
+      .news-top {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery img {
+        height: auto;
       }
     }
   </style>
@@ -162,46 +188,70 @@
 <header>
   <strong>Yanyu Wang</strong>
   <nav>
-    <a href="#home">Home</a>
+    <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="research.html">Research</a>
     <a href="publications.html">Publications</a>
-    <a href="news.html">News</a>
+    <a class="active" href="news.html">News</a>
     <a href="library.html">Library</a>
   </nav>
 </header>
 
-<main id="home">
-  <section class="hero">
-    <div>
-      <div class="eyebrow">Environmental Scientist</div>
+<main>
+  <h1>News</h1>
+  <p class="subtitle">Updates on achievements, activities, and milestones.</p>
 
-      <h1>Building science-based solutions for sustainable agriculture and resilient food systems.</h1>
+  <article class="news-card">
+    <div class="news-top">
+      <div>
+        <span class="date">May 2026</span>
 
-      <p class="subtitle">
-        I study sustainable agriculture and food systems through systems modeling,
-        geospatial analysis, nutrient budgeting, and stakeholder engagement.
-      </p>
+        <h2>Ph.D. Defense & Graduation</h2>
 
-      <div class="role">
-        <strong>Yanyu Wang, Ph.D.</strong><br>
-        Sustainable Agriculture &amp; Food Systems<br>
-        Postdoctoral Fellow, Georgetown University Earth Commons<br>
-        ✉️ <a href="mailto:yw1359@georgetown.edu">yw1359@georgetown.edu</a>
+        <div class="institution">
+          University of Maryland Center for Environmental Science
+        </div>
+
+        <p>
+          In May 2026, I successfully defended my Ph.D. dissertation and officially
+          graduated with a Ph.D. in Marine Estuarine Environmental Sciences.
+        </p>
+
+        <p>
+          I am deeply grateful to my advisors, committee members, collaborators,
+          lab members, family, and friends for their mentorship and support
+          throughout this journey.
+        </p>
+
+        <p>
+          This milestone marks the end of an exciting chapter and the beginning
+          of my next chapter as a Postdoctoral Fellow at Georgetown University
+          Earth Commons.
+        </p>
       </div>
 
-      <div class="buttons">
-        <a href="CV_Yanyu_Wang.pdf">CV</a>
-        <a href="https://scholar.google.com/citations?user=sYjO7yQAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a href="https://orcid.org/0000-0002-0405-9822" target="_blank">ORCID</a>
-        <a href="https://www.linkedin.com/in/yanyu-wang-34884316b/" target="_blank">LinkedIn</a>
+      <div class="main-photo">
+        <img src="graduation-main.jpg" alt="Yanyu Wang at graduation ceremony">
       </div>
     </div>
 
-    <div class="photo-card">
-      <img src="headshot.jpg" alt="Portrait of Yanyu Wang">
+    <div class="gallery">
+      <div>
+        <img src="graduation-advisors.jpg" alt="Yanyu Wang with advisors and committee members">
+        <div class="caption">With advisors and committee members at the graduation ceremony.</div>
+      </div>
+
+      <div>
+        <img src="defense-presentation.jpg" alt="Yanyu Wang during Ph.D. defense presentation">
+        <div class="caption">During my Ph.D. defense presentation.</div>
+      </div>
+
+      <div>
+        <img src="graduation-celebration.jpg" alt="Yanyu Wang celebrating with lab members and collaborators">
+        <div class="caption">Celebrating with lab members and collaborators.</div>
+      </div>
     </div>
-  </section>
+  </article>
 </main>
 
 <footer>
