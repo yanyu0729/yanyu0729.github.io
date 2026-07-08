@@ -112,7 +112,8 @@ p{
 .paper-button:hover{ background:#2f6f4e; }
 
 .main-photo img,
-.gallery img{
+.gallery img,
+.publication-image img{
     width:100%;
     display:block;
     border-radius:20px;
@@ -122,6 +123,18 @@ p{
 .main-photo img{
     max-height:520px;
     object-position:center;
+}
+
+.publication-image{
+    border-top:1px solid #e5e7eb;
+    margin-top:44px;
+    padding-top:28px;
+}
+
+.publication-image img{
+    max-width:1000px;
+    margin:0 auto;
+    object-fit:contain;
 }
 
 .gallery{
@@ -134,29 +147,6 @@ p{
 }
 
 .gallery img{ height:220px; }
-
-.publication-gallery{
-    grid-template-columns:repeat(2,1fr);
-}
-
-.publication-gallery img{
-    height:300px;
-    object-fit:cover;
-}
-
-.publication-gallery .wide-img{
-    object-fit:contain;
-    background:#f8fafc;
-}
-
-.publication-gallery video{
-    width:100%;
-    height:300px;
-    border-radius:20px;
-    display:block;
-    background:#000;
-    object-fit:cover;
-}
 
 .caption{
     text-align:center;
@@ -197,16 +187,11 @@ footer{
     .news-card{ padding:28px; }
 
     .news-top,
-    .gallery,
-    .publication-gallery{
+    .gallery{
         grid-template-columns:1fr;
     }
 
-    .gallery img,
-    .publication-gallery img,
-    .publication-gallery video{
-        height:auto;
-    }
+    .gallery img{ height:auto; }
 }
 </style>
 </head>
@@ -304,9 +289,8 @@ Celebrating with lab members and advisors.
 <!-- March 2026 News -->
 <article class="news-card">
 
-<div class="news-top">
-
 <div>
+
 <span class="date">March 2026</span>
 
 <h2>New Article Published in <em>Nature Food</em></h2>
@@ -316,11 +300,15 @@ Nature Food
 </div>
 
 <p>
-My article, <em>A framework for estimating manure nitrogen balance and recycling potential for current and future conditions in the USA</em>, was published online in <em>Nature Food</em>.
+I am excited to share that our paper, <em>A framework for estimating manure nitrogen balance and recycling potential for current and future conditions in the USA</em>, was published in <em>Nature Food</em>.
 </p>
 
 <p>
-This study develops a national framework for estimating manure nitrogen balance and recycling potential, helping identify opportunities to improve nutrient circularity and sustainable agriculture across the United States.
+The study presents a national framework for quantifying manure nitrogen balance and recycling potential across the United States, providing new insights into improving nutrient circularity and sustainable agricultural systems.
+</p>
+
+<p>
+This work was conducted in collaboration with colleagues from the USDA Agricultural Research Service and the University of Maryland Center for Environmental Science.
 </p>
 
 <p>
@@ -328,50 +316,15 @@ This study develops a national framework for estimating manure nitrogen balance 
 Read the Nature Food article
 </a>
 </p>
+
 </div>
 
-<div class="main-photo">
+<div class="publication-image">
 <img src="nature-food-announcement.jpg" alt="Nature Food publication announcement">
+
 <div class="caption">
-Announcement of our publication in <em>Nature Food</em> highlighting the framework for estimating manure nitrogen balance and recycling potential across the United States.
+Announcement of our publication in <em>Nature Food</em> highlighting a framework for estimating manure nitrogen balance and recycling potential across the United States.
 </div>
-</div>
-
-</div>
-
-<div class="gallery publication-gallery">
-
-<div>
-<img src="nature-food-fieldwork.jpg" alt="Fieldwork at Jornada Experimental Range">
-<div class="caption">
-Conducting fieldwork at the USDA Agricultural Research Service Jornada Experimental Range in New Mexico, where field observations and discussions helped inform my understanding of nutrient management in diverse agricultural systems.
-</div>
-</div>
-
-<div>
-<img src="nature-food-jornada.jpg" alt="Jornada Experimental Range sign">
-<div class="caption">
-The USDA Agricultural Research Service Jornada Experimental Range, a long-term research site dedicated to advancing sustainable agricultural and ecosystem science.
-</div>
-</div>
-
-<div>
-<img class="wide-img" src="nature-food-announcement.jpg" alt="Nature Food publication figure">
-<div class="caption">
-Overview of the conceptual framework illustrating recoverable manure nitrogen, crop nitrogen demand, and pathways for enhancing nutrient recycling under current and future management scenarios.
-</div>
-</div>
-
-<div>
-<video controls playsinline>
-<source src="nature-food-movie.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-<div class="caption">
-Animated overview of the manure nitrogen recycling framework and major findings from our <em>Nature Food</em> publication.
-</div>
-</div>
-
 </div>
 
 </article>
