@@ -112,7 +112,8 @@ p{
 .paper-button:hover{ background:#2f6f4e; }
 
 .main-photo img,
-.gallery img{
+.gallery img,
+.two-photo-gallery img{
     width:100%;
     display:block;
     border-radius:20px;
@@ -134,6 +135,19 @@ p{
 }
 
 .gallery img{ height:220px; }
+
+.two-photo-gallery{
+    border-top:1px solid #e5e7eb;
+    margin-top:44px;
+    padding-top:28px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:22px;
+}
+
+.two-photo-gallery img{
+    height:360px;
+}
 
 .caption{
     text-align:center;
@@ -174,11 +188,15 @@ footer{
     .news-card{ padding:28px; }
 
     .news-top,
-    .gallery{
+    .gallery,
+    .two-photo-gallery{
         grid-template-columns:1fr;
     }
 
-    .gallery img{ height:auto; }
+    .gallery img,
+    .two-photo-gallery img{
+        height:auto;
+    }
 }
 </style>
 </head>
@@ -281,8 +299,11 @@ Celebrating with lab members and advisors.
 <div>
 <span class="date">March 2026</span>
 
-<h2>New Article Published </h2>
+<h2>New Article Published in <em>Nature Food</em></h2>
 
+<div class="institution">
+Nature Food
+</div>
 
 <p>
 Indicators are powerful tools for guiding nutrient management, but they need to be defined transparently and applied within appropriate contexts. In this study, we developed a transparent framework to more consistently evaluate manure nitrogen recycling potential across the United States.
@@ -305,6 +326,53 @@ Read the Nature Food article
 
 <div class="main-photo">
 <img src="nature-food-announcement.jpg" alt="Nature Food publication announcement">
+</div>
+
+</div>
+
+</article>
+
+<!-- December 2025 News -->
+<article class="news-card">
+
+<div>
+
+<span class="date">December 2025</span>
+
+<h2>Presented Two Posters at AGU</h2>
+
+<div class="institution">
+American Geophysical Union Annual Meeting
+</div>
+
+<p>
+In December 2025, I attended the AGU Annual Meeting and presented two posters on nitrogen management and nutrient circularity in agricultural systems.
+</p>
+
+<p>
+One poster focused on integrating systems thinking into nitrogen management using insights from the U.S. nitrogen budget from 2012 to 2022. The other presented a structured framework for assessing manure nitrogen balance and recycling potential under current and future conditions.
+</p>
+
+<p>
+The meeting provided a valuable opportunity to share my work, receive feedback, and connect with researchers working across Earth, environmental, and agricultural sciences.
+</p>
+
+</div>
+
+<div class="two-photo-gallery">
+
+<div>
+<img src="agu-2025-n-budget.jpg" alt="AGU 2025 poster on U.S. nitrogen budget">
+<div class="caption">
+Presenting my poster on systems thinking and the U.S. nitrogen budget at AGU 2025.
+</div>
+</div>
+
+<div>
+<img src="agu-2025-manure-recycling.jpg" alt="AGU 2025 poster on manure nitrogen recycling">
+<div class="caption">
+Presenting my poster on manure nitrogen balance and recycling potential at AGU 2025.
+</div>
 </div>
 
 </div>
