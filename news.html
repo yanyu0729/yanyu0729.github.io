@@ -122,7 +122,8 @@
 
     .main-photo img,
     .gallery img,
-    .two-photo-gallery img {
+    .two-photo-gallery img,
+    .field-media img {
       width: 100%;
       display: block;
       border-radius: 20px;
@@ -158,6 +159,31 @@
 
     .two-photo-gallery img {
       height: 360px;
+    }
+
+    .field-media {
+      border-top: 1px solid #e5e7eb;
+      margin-top: 44px;
+      padding-top: 28px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .field-media img {
+      height: 360px;
+    }
+
+    .field-media video {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      object-fit: cover;
+      max-height: 520px;
+    }
+
+    .video-box {
+      grid-column: 1 / -1;
     }
 
     .caption {
@@ -210,13 +236,19 @@
 
       .news-top,
       .gallery,
-      .two-photo-gallery {
+      .two-photo-gallery,
+      .field-media {
         grid-template-columns: 1fr;
       }
 
       .gallery img,
-      .two-photo-gallery img {
+      .two-photo-gallery img,
+      .field-media img {
         height: auto;
+      }
+
+      .video-box {
+        grid-column: auto;
       }
     }
   </style>
@@ -387,6 +419,60 @@
         <div>
           <img src="agu-2025-manure-recycling.jpg"
             alt="AGU 2025 poster on manure nitrogen recycling">
+        </div>
+
+      </div>
+
+    </article>
+
+    <!-- June–July 2025 News -->
+    <article class="news-card">
+
+      <div>
+
+        <span class="date">June–July 2025</span>
+
+        <h2>Field Research at USDA Jornada Experimental Range</h2>
+
+        <div class="institution">
+          USDA Agricultural Research Service · Jornada Experimental Range
+        </div>
+
+        <p>
+          Although much of my research involves systems modeling, spatial analysis, and working with large datasets, meaningful science begins with understanding where those data originate.
+        </p>
+
+        <p>
+          During the summer of 2025, I joined colleagues at the USDA Agricultural Research Service's Jornada Experimental Range in southern New Mexico to learn firsthand how manure management and agricultural field measurements are conducted.
+        </p>
+
+        <p>
+          Spending time in the field provided valuable perspective on the observations, sampling, and long-term monitoring efforts that underpin many of the datasets used in agricultural and environmental research.
+        </p>
+
+        <p>
+          This experience reminded me that robust data depend on dedicated field scientists and technicians whose work often happens behind the scenes. Connecting field observations with modeling and data analysis is essential for developing practical, science-based solutions for sustainable nutrient management.
+        </p>
+
+      </div>
+
+      <div class="field-media">
+
+        <div>
+          <img src="jornada-field-1.jpg"
+            alt="Field research at USDA Jornada Experimental Range">
+        </div>
+
+        <div>
+          <img src="jornada-field-2.jpg"
+            alt="USDA Jornada Experimental Range field site in New Mexico">
+        </div>
+
+        <div class="video-box">
+          <video controls>
+            <source src="jornada-field-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
         </div>
 
       </div>
