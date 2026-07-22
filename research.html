@@ -3,342 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-<title>Research | Yanyu Wang</title>
-
-<style>
-  /* =========================
-     Global styles
-  ========================== */
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: #f7f8f5;
-    color: #1f2933;
-  }
-
-
-  /* =========================
-     Header and navigation
-  ========================== */
-
-  header {
-    padding: 28px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(247, 248, 245, 0.9);
-    position: sticky;
-    top: 0;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    z-index: 10;
-  }
-
-  header strong {
-    font-size: 18px;
-  }
-
-  nav a {
-    margin-left: 22px;
-    text-decoration: none;
-    color: #334155;
-    font-weight: 500;
-    font-size: 15px;
-    transition: color 0.2s ease;
-  }
-
-  nav a:hover,
-  nav a.active {
-    color: #1f3d2b;
-  }
-
-
-  /* =========================
-     Main page heading
-  ========================== */
-
-  main {
-    padding: 70px 8% 90px;
-  }
-
-  h1 {
-    margin: 0 0 18px;
-    font-size: 56px;
-    line-height: 1.1;
-    color: #1f3d2b;
-  }
-
-  .intro {
-    max-width: 980px;
-    margin: 0 0 65px;
-    font-size: 21px;
-    line-height: 1.75;
-    font-weight: 400;
-    color: #294936;
-    text-align: left;
-  }
-
-  .intro strong {
-    font-weight: 650;
-    color: #1f3d2b;
-  }
-
-
-  /* =========================
-     Research detail sections
-  ========================== */
-
-  .detail-section {
-    display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 46px;
-    align-items: center;
-    padding: 70px 0;
-    border-top: 1px solid #dbe3d5;
-    scroll-margin-top: 100px;
-  }
-
-  /*
-    Alternate the image and text positions.
-    Because the four research cards were removed,
-    nth-of-type is more reliable here than nth-child.
-  */
-
-  .detail-section:nth-of-type(even) {
-    grid-template-columns: 1.1fr 1fr;
-  }
-
-  .detail-section:nth-of-type(even) .detail-image {
-    order: 2;
-  }
-
-
-  /* =========================
-     Research figures
-  ========================== */
-
-  .detail-image {
-    background: #ffffff;
-    border-radius: 24px;
-    padding: 18px;
-    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.10);
-  }
-
-  .detail-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 16px;
-    display: block;
-  }
-
-  .figure-caption {
-    margin: 18px 4px 2px;
-    font-size: 14px;
-    line-height: 1.55;
-    color: #475569;
-  }
-
-  .caption-title,
-  .caption-authors {
-    display: block;
-  }
-
-  .caption-title {
-    margin-bottom: 10px;
-    color: #1f2933;
-    font-weight: 650;
-  }
-
-  .caption-authors {
-    margin-bottom: 3px;
-  }
-
-  .figure-caption a {
-    color: #1f3d2b;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(31, 61, 43, 0.35);
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .figure-caption a:hover {
-    color: #2d6a4f;
-    border-bottom-color: #2d6a4f;
-  }
-
-
-  /* =========================
-     Research text
-  ========================== */
-
-  .detail-text h2 {
-    margin: 0 0 18px;
-    font-size: 36px;
-    line-height: 1.2;
-    color: #1f3d2b;
-  }
-
-  .detail-text p {
-    margin: 0 0 18px;
-    font-size: 17px;
-    line-height: 1.75;
-    color: #475569;
-  }
-
-  .detail-text p:last-child {
-    margin-bottom: 0;
-  }
-
-  .detail-text h3 {
-    margin: 28px 0 12px;
-    color: #1f3d2b;
-    font-size: 21px;
-  }
-
-  .detail-text ul {
-    margin: 0;
-    padding-left: 22px;
-    color: #475569;
-    line-height: 1.8;
-    font-size: 16px;
-  }
-
-  .detail-text a {
-    color: #1f3d2b;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(31, 61, 43, 0.35);
-    transition: color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .detail-text a:hover {
-    color: #2d6a4f;
-    border-bottom-color: #2d6a4f;
-  }
-
-
-  /* =========================
-     Footer
-  ========================== */
-
-  footer {
-    text-align: center;
-    padding: 35px 8%;
-    color: #64748b;
-    font-size: 14px;
-  }
-
-
-  /* =========================
-     Tablet and mobile
-  ========================== */
-
-  @media (max-width: 900px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 16px;
-    }
-
-    nav a {
-      margin-left: 0;
-    }
-
-    main {
-      padding: 50px 7% 70px;
-    }
-
-    h1 {
-      font-size: 42px;
-    }
-
-    .intro {
-      max-width: 100%;
-      margin-bottom: 50px;
-      font-size: 19px;
-      line-height: 1.7;
-    }
-
-    .detail-section,
-    .detail-section:nth-of-type(even) {
-      grid-template-columns: 1fr;
-      gap: 34px;
-      padding: 55px 0;
-    }
-
-    .detail-section:nth-of-type(even) .detail-image {
-      order: 0;
-    }
-
-    .detail-text h2 {
-      font-size: 32px;
-    }
-
-    .detail-text p {
-      font-size: 16px;
-    }
-  }
-
-
-  @media (max-width: 600px) {
-    header {
-      padding: 22px 6%;
-    }
-
-    main {
-      padding: 42px 6% 60px;
-    }
-
-    h1 {
-      font-size: 38px;
-    }
-
-    .intro {
-      font-size: 18px;
-      line-height: 1.65;
-    }
-
-    .detail-section {
-      padding: 48px 0;
-    }
-
-    .detail-image {
-      padding: 12px;
-      border-radius: 18px;
-    }
-
-    .detail-image img {
-      border-radius: 12px;
-    }
-
-    .detail-text h2 {
-      font-size: 29px;
-    }
-
-    .figure-caption {
-      font-size: 13px;
-    }
-  }
-</style>
+  <title>Research | Yanyu Wang</title>
+  <style>
+    :root{--background:#f7f8f5;--text-dark:#1f2933;--text-medium:#475569;--text-light:#64748b;--green:#2f6f4e;--green-dark:#1f3d2b;--border:#d7ded2}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--background);color:var(--text-dark)}
+    header{width:100%;min-height:88px;padding:0 8%;display:flex;align-items:center;justify-content:flex-end;position:sticky;top:0;z-index:100;background:rgba(247,248,245,.94);border-bottom:1px solid rgba(215,222,210,.65);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+    nav{margin-left:auto;display:flex;align-items:center;justify-content:flex-end;gap:28px} nav a{color:#334155;font-size:15px;font-weight:500;text-decoration:none;transition:color .2s ease} nav a:hover,nav a.active{color:var(--green)}
+    main{width:min(1160px,84%);margin:0 auto;padding:70px 0 90px} h1{margin:0 0 58px;color:var(--green-dark);font-size:clamp(46px,5vw,60px);line-height:1.08;letter-spacing:-.025em}
+    .research-list{display:flex;flex-direction:column;gap:92px}.research-section{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:64px;align-items:start}.research-section.reverse .research-image-wrap{order:2}.research-section.reverse .research-copy{order:1}
+    .research-image-wrap{margin:0}.research-image{width:100%;display:block;border-radius:18px;border:1px solid rgba(215,222,210,.8);box-shadow:0 14px 34px rgba(31,41,51,.09);background:#eef1ec} figcaption{margin-top:12px;color:var(--text-light);font-size:13px;line-height:1.55}
+    .research-copy h2{margin:0 0 22px;color:var(--text-dark);font-size:31px;line-height:1.25;letter-spacing:-.015em}.research-copy p{margin:0 0 20px;color:var(--text-medium);font-size:17px;line-height:1.78}.research-copy p:last-child{margin-bottom:0}
+    footer{width:min(1160px,84%);margin:0 auto;padding:28px 0 40px;border-top:1px solid var(--border);color:var(--text-light);font-size:14px}
+    @media(max-width:980px){header{padding:0 6%}nav{gap:18px}main,footer{width:88%}.research-section{grid-template-columns:1fr;gap:32px}.research-section.reverse .research-image-wrap,.research-section.reverse .research-copy{order:initial}.research-image-wrap{max-width:760px}}
+    @media(max-width:760px){header{min-height:auto;padding:20px 6%}nav{flex-wrap:wrap;justify-content:flex-end;gap:10px 16px}nav a{font-size:14px}main{padding:48px 0 70px}h1{margin-bottom:46px}.research-list{gap:66px}.research-copy h2{font-size:27px}.research-copy p{font-size:16px}}
+    @media(max-width:560px){header{display:block}nav{justify-content:flex-start}h1{font-size:40px}.research-image{border-radius:14px}}
+  </style>
 </head>
-
 <body>
-
   <header>
-    <strong>Yanyu Wang</strong>
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
-      <a href="research.html" class="active">Research</a>
+      <a class="active" href="research.html">Research</a>
       <a href="publications.html">Publications</a>
       <a href="news.html">News</a>
       <a href="library.html">Library</a>
@@ -347,163 +32,59 @@
 
   <main>
     <h1>Research</h1>
+    <section class="research-list">
 
-<p class="intro">
-  My research combines
-  <strong>N budget quantification</strong>,
-  <strong>data-driven statistical analysis</strong>,
-  <strong>nutrient circularity</strong>,
-  and
-  <strong>stakeholder engagement</strong>
-  to advance sustainable agriculture and food systems.
-  Through these complementary approaches, I develop science-based solutions for improving nitrogen management, enhancing nutrient use efficiency, and reducing environmental impacts across agricultural systems and beyond.
-</p>
+      <article class="research-section">
+        <figure class="research-image-wrap">
+          <img class="research-image" src="images/n-flow-detail.jpg" alt="Academic figure for nitrogen flow analysis">
+          <figcaption>Nitrogen budget for the contiguous United States in 2022. Yanyu Wang, Eric A. Davidson, Baojing Gu, William C. Dennison, Luis Lassaletta, and Xin Zhang. <em>Proceedings of the National Academy of Sciences (PNAS)</em>, in review.</figcaption>
+        </figure>
+        <div class="research-copy">
+          <h2>Nitrogen Cycling and Systems Analysis</h2>
+          <p>Modern food systems are highly interconnected, linking agricultural production with industrial manufacturing, international trade, food consumption, wastewater treatment, solid waste management, and the natural environment. Decisions made within one sector often propagate throughout the entire system, creating feedbacks that cannot be understood by studying individual components in isolation.</p>
+          <p>My research adopts a systems perspective to quantify nitrogen flows across coupled human and natural systems. Using the Coupled Human and Natural Systems (CHANS) framework, I developed a comprehensive nitrogen budget for the contiguous United States that tracks nitrogen movement across thirteen interconnected subsystems, including cropland, livestock, forests, industry, human consumption, wastewater, solid waste, and the environment. This systems-based approach reveals where nitrogen enters the food system, how it is transformed, where it accumulates, and where it is ultimately lost to the environment.</p>
+        </div>
+      </article>
 
-<hr class="section-divider">
+      <article class="research-section reverse">
+        <figure class="research-image-wrap">
+          <img class="research-image" src="images/statistical-driver-detail.jpg" alt="Academic figure for statistical drivers">
+          <figcaption>County-level crop nitrogen use efficiency (NUE) across the United States and China and an example nonlinear response of NUE to synthetic fertilizer input. Yanyu Wang, Dong Liang, Xin Zhang, et al. Manuscript in preparation.</figcaption>
+        </figure>
+        <div class="research-copy">
+          <h2>Statistical Modeling and Geospatial Analysis</h2>
+          <p>Nitrogen use efficiency is shaped by climate, soil, management practices, socioeconomic conditions, and policy. Because these factors vary across regions and interact in nonlinear ways, identifying effective nutrient management strategies remains challenging.</p>
+          <p>My research integrates spatial statistics, machine learning, and geospatial analysis to uncover the drivers of agricultural sustainability across scales. One example of this work compares county-level crop nitrogen use efficiency (NUE) across the United States and China. By integrating nitrogen budgets with climate, management, crop composition, and socioeconomic variables, I applied a suite of regression, generalized additive (GAM), spatial conditional autoregressive (CAR), and random forest models to identify and compare the drivers of crop NUE in both countries.</p>
+        </div>
+      </article>
 
-<section id="n-flow" class="detail-section">
+      <article class="research-section">
+        <figure class="research-image-wrap">
+          <img class="research-image" src="images/nutrient-recycling-detail.jpg" alt="Academic figure for nutrient recycling">
+          <figcaption>Evaluation of potential improvements in county-level manure nitrogen (N) balance to identify priorities for manure recycling. Figure adapted from Wang, Y., Zhang, X., Spiegal, S., et al. <em>A framework for estimating manure nitrogen balance and recycling potential for current and future conditions in the USA</em>. <em>Nature Food</em>, 2026.</figcaption>
+        </figure>
+        <div class="research-copy">
+          <h2>Circular Nutrient Management</h2>
+          <p>Modern agriculture has become increasingly specialized, separating crop and livestock production across landscapes. This spatial decoupling disrupts natural nutrient cycles: feed is transported long distances to livestock operations, but excess manure is often too costly to transport back to croplands where nutrients are needed. As a result, nutrients accumulate in livestock-intensive regions, contributing to air and water pollution, while crop-producing regions remain dependent on synthetic fertilizers. Recovering and recycling nutrients from livestock manure and other organic waste streams provides an opportunity to close these nutrient loops, reduce reliance on fossil-fuel-intensive fertilizer production, and advance a more circular agricultural system.</p>
+          <p>My research develops transparent frameworks for evaluating manure nitrogen recycling potential, providing a consistent basis for assessing how recoverable manure nutrients align with crop nutrient demand under current and future conditions. Building on this work, I am particularly interested in developing spatial planning frameworks that optimize manure redistribution, evaluate opportunities for recoupling crop and livestock production, and quantify trade-offs among nutrient pollution, greenhouse gas emissions, agricultural productivity, and economic feasibility. Ultimately, I hope to develop science-based strategies that transform nutrient recycling from a waste management challenge into a cornerstone of a circular nutrient economy, supporting more sustainable and resilient food systems.</p>
+        </div>
+      </article>
 
-    <div class="detail-image">
-        <img src="images/n-flow-detail.jpg" alt="Academic figure for nitrogen flow analysis">
+      <article class="research-section reverse">
+        <figure class="research-image-wrap">
+          <img class="research-image" src="images/stakeholder-engagement-detail.jpg" alt="Academic figure for stakeholder engagement">
+          <figcaption>U.S.–China stakeholder workshops on sustainable nitrogen management. Photos from the parallel stakeholder workshops jointly supported by the U.S. National Science Foundation (NSF) and the National Natural Science Foundation of China (NSFC), bringing together researchers, government agencies, industry representatives, NGOs, and other stakeholders to co-develop sustainable nitrogen management strategies.</figcaption>
+        </figure>
+        <div class="research-copy">
+          <h2>Stakeholder Engagement and International Collaboration</h2>
+          <p>Sustainable nitrogen management requires collaboration across disciplines, sectors, and national boundaries. While farmers play a central role in improving nitrogen use, many other stakeholders, including policymakers, industry, supply chain actors, researchers, and consumers, influence how nitrogen moves through food systems and how management decisions are implemented. Moreover, because food, feed, and fertilizer trade redistribute nitrogen across regions and reactive nitrogen can travel across political boundaries through air and water, effective nitrogen management requires both local action and international cooperation.</p>
+          <p>My research integrates stakeholder engagement with international collaboration to bridge scientific knowledge and real-world decision-making. By bringing together diverse stakeholders, I seek to co-develop science-based strategies that improve nutrient management while accounting for local priorities, governance systems, and socioeconomic contexts. This collaborative approach helps ensure that research not only advances scientific understanding but also informs practical solutions that are relevant, feasible, and broadly applicable.</p>
+        </div>
+      </article>
 
-<p class="figure-caption">
-    <strong>Nitrogen budget for the contiguous United States in 2022.</strong>
-    <br><br>
-
-    Yanyu Wang, Eric A. Davidson, Baojing Gu, William C. Dennison,
-    Luis Lassaletta, and Xin Zhang.
-    <br>
-
-    <em>Proceedings of the National Academy of Sciences (PNAS), in review.</em>
-</p>
-    </div>
-
-    <div class="detail-text">
-
-<h2>Nitrogen Budget</h2>
-
-<p>
-Nitrogen is indispensable for sustaining modern society. As a fundamental nutrient for plant growth, reactive nitrogen supports nearly half of global food production through the use of synthetic fertilizers and biological nitrogen fixation. Although nitrogen is essential for feeding a growing population, its use is remarkably inefficient. More than half of the nitrogen applied to agricultural systems is never incorporated into harvested food but is instead lost to the atmosphere or water through ammonia volatilization, greenhouse gas emissions, nitrate leaching, and runoff. These losses contribute to climate change, degraded air quality, eutrophication of rivers and coastal waters, biodiversity loss, and adverse human health impacts.
-</p>
-
-<p>
-Historically, research on nitrogen management has focused primarily on crop and livestock production, where fertilizer application and manure management have long been recognized as major sources of nitrogen loss. While these studies have greatly improved our understanding of agricultural nitrogen use efficiency, they capture only part of the nitrogen cycle. Modern food systems are highly interconnected, linking agricultural production with industrial manufacturing, international trade, food consumption, wastewater treatment, solid waste management, and the natural environment. Decisions made within one sector often propagate throughout the entire system, creating feedbacks that cannot be understood by studying individual components in isolation.
-</p>
-
-<p>
-My research adopts a systems perspective by quantifying nitrogen flows across the entire coupled human and natural system. Using the Coupled Human and Natural Systems (CHANS) framework, I developed a comprehensive nitrogen budget for the contiguous United States that tracks nitrogen movement across thirteen interconnected subsystems, including cropland, livestock, forests, industry, human consumption, wastewater, solid waste, and the environment. This systems-based approach reveals where nitrogen enters the food system, how it is transformed, where it accumulates, and where it is ultimately lost to the environment.
-</p>
-
-
-    </div>
-
-</section>
-
-    <section id="statistical-drivers" class="detail-section">
-      <div class="detail-image">
-        <img src="images/statistical-driver-detail.jpg" alt="Academic figure for statistical drivers">
-<p class="figure-caption">
-    <strong>County-level crop nitrogen use efficiency (NUE) across the United States and China and example nonlinear response of NUE to synthetic fertilizer input.</strong>
-    <br><br>
-
-    Yanyu Wang, Dong Liang, Xin Zhang, et al. <em>Manuscript in preparation.</em>
-    <br>
-</p>
-</div>
-      <div class="detail-text">
-        <h2>Statistical Analysis</h2>
-        <p>
-          How efficiently nitrogen is managed in agricultural systems depends on a combination of climate, soil, management practices, socioeconomic conditions, and policy. These factors vary across regions and interact in nonlinear ways, making it difficult to identify effective nutrient management strategies. Advances in spatial statistics, machine learning, and geospatial analysis provide powerful tools for understanding these relationships and supporting evidence-based decision-making.
-        </p>
-            <p>
-          My research integrates spatial statistics, machine learning, and geospatial analysis to uncover the drivers of agricultural sustainability across scales. One example of my current work is to compare county-level crop nitrogen use efficiency (NUE) across the United States and China. By integrating nitrogen budgets with climate, management, crop composition, and socioeconomic variables, I applied a suite of regression, generalized additive (GAM), spatial conditional autoregressive (CAR), and random forest models to identify and compare the drivers of crop NUE in both countries. This work identified nitrogen input intensity as one of the primary drivers of crop NUE and showed that synthetic fertilizer and manure have optimal application ranges, beyond which additional inputs reduce NUE.
-        </p>
-                    <p>
-          I also plan to investigate the environmental, economic, and socioeconomic drivers that have shaped the current spatial concentration of concentrated animal feeding operations (CAFOs) across the United States. By integrating these insights with spatial optimization and decision-support frameworks, I aim to identify opportunities for better aligning livestock production with surrounding croplands, improving manure redistribution, reducing nutrient losses and greenhouse gas emissions, and enhancing nutrient circularity while maintaining agricultural productivity. 
-        </p>
-      </div>
     </section>
-
-    <section id="nutrient-recycling" class="detail-section">
-      <div class="detail-image">
-        <img src="images/nutrient-recycling-detail.jpg" alt="Academic figure for nutrient recycling">
-        <p class="figure-caption">
-    <strong class="caption-title">
-        Evaluation of potential improvements in county-level manure nitrogen (N) balance to identify priorities for manure recycling.
-    </strong>
-
-    <span class="caption-authors">
-        Figure adapted from Wang, Y., Zhang, X., Spiegal, S., <em>et al.</em>
-    </span>
-
-    <em>
-        <a href="https://www.nature.com/articles/s43016-026-01312-5"
-           target="_blank"
-           rel="noopener noreferrer">
-           A framework for estimating manure nitrogen balance and recycling potential for current and future conditions in the USA.
-           Nature Food, 2026.
-        </a>
-    </em>
-</p>
-      </div>
-      <div class="detail-text">
-        <h2>Nutrient Recycling</h2>
-        <p>
-Modern agriculture has become increasingly specialized, separating crop and livestock production across landscapes. This spatial decoupling disrupts natural nutrient cycles: feed is transported long distances to livestock operations, but excess manure is often too costly to transport back to croplands where nutrients are needed. As a result, nutrients accumulate in livestock-intensive regions, contributing to air and water pollution, while crop-producing regions remain dependent on synthetic fertilizers. Recovering and recycling nutrients from livestock manure and other organic waste streams provides an opportunity to close these nutrient loops, reduce reliance on fossil-fuel-intensive fertilizer production, and advance a more circular agricultural system.
-        </p>
-
-                <p>
-My research develops a transparent framework for evaluating manure nitrogen recycling potential, providing a consistent basis for assessing how recoverable manure nutrients align with crop nutrient demand under both current and future conditions. Building on this work, I am interested in understanding how the spatial organization of agricultural systems influences nutrient circularity. By integrating nitrogen flow analysis, geospatial modeling, and scenario analysis, my research explores how reconnecting crop and livestock production can improve manure redistribution, reduce nutrient losses and greenhouse gas emissions, and enhance nutrient recycling while remaining environmentally, economically, and socially feasible.
-        </p>
-                        <p>
-Looking ahead, at Georgetown I am expanding this work from quantifying nutrient recycling potential to designing circular agricultural systems. My research will integrate high-resolution spatial modeling, climate assessment, and stakeholder-informed scenario analysis to identify where nutrient recycling can deliver the greatest environmental, climate, and agricultural benefits. I am particularly interested in developing spatial planning frameworks that optimize manure redistribution, evaluate opportunities for recoupling crop and livestock production, and quantify trade-offs among nutrient pollution, greenhouse gas emissions, agricultural productivity, and economic feasibility. Ultimately, I hope to develop science-based strategies that transform nutrient recycling from a waste management challenge into a cornerstone of a circular nutrient economy, supporting more sustainable and resilient food systems.
-        </p>
-      </div>
-    </section>
-
-    <section id="stakeholder-engagement" class="detail-section">
-      <div class="detail-image">
-        <img src="images/stakeholder-engagement-detail.jpg" alt="Academic figure for stakeholder engagement">
-    <p class="figure-caption">
-    <strong class="caption-title">
-        U.S.–China stakeholder workshops on sustainable nitrogen management.
-    </strong>
-
-    <span class="caption-authors">
-        Photos from the parallel stakeholder workshops jointly supported by the U.S. National Science Foundation (NSF) and the National Natural Science Foundation of China (NSFC), bringing together researchers, government agencies, industry representatives, NGOs, and other stakeholders to co-develop sustainable nitrogen management strategies.
-    </span>
-</p> 
-    </div>
-      <div class="detail-text">
-        <h2>Stakeholder Engagement</h2>
-        <p>
-Sustainable nitrogen management is a global challenge that requires collaboration across disciplines, sectors, and national boundaries. While farmers play a central role in improving nitrogen use, many other stakeholders—including policymakers, industry, supply chain actors, researchers, and consumers—influence how nitrogen moves through food systems and how management decisions are implemented. Moreover, because food, feed, and fertilizer trade redistribute nitrogen across regions and reactive nitrogen can travel across political boundaries through air and water, effective nitrogen management requires both local action and international cooperation.
-        </p>
-
-                <p>
-My research integrates stakeholder engagement with international collaboration to bridge scientific knowledge and real-world decision-making. By bringing together diverse stakeholders, I seek to co-develop science-based strategies that improve nutrient management while accounting for local priorities, governance systems, and socioeconomic contexts. This collaborative approach helps ensure that research not only advances scientific understanding but also informs practical solutions that are relevant, feasible, and broadly applicable.
-        </p>
-                <p>
-As part of the NSF–NSFC collaborative project, 
-<a href="https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2025826"
-   target="_blank"
-   rel="noopener noreferrer">
-"INFEWS: U.S.–China: Managing Agricultural Nitrogen to Achieve a Sustainable Food–Energy–Water Nexus in China and the U.S."
-</a>,
-I helped organize and facilitate the first parallel U.S.–China stakeholder workshops on sustainable nitrogen management. These workshops brought together researchers, government agencies, industry representatives, NGOs, and other stakeholders to examine the connections between nitrogen management and food, energy, and water (FEW) sustainability. Through these discussions, we identified both shared priorities and country-specific challenges, implementation barriers, and opportunities for mutual learning. Despite substantial differences in governance systems and agricultural contexts, stakeholders from both countries recognized many common pathways for improving nitrogen management, demonstrating the value of stakeholder-led collaboration in advancing sustainable FEW systems.
-        </p>
-                <p>
-Looking ahead, I hope to continue building international research networks that connect science, policy, and practice across countries. By integrating stakeholder engagement throughout the research process—from identifying research priorities to evaluating management strategies and communicating scientific findings—I aim to co-develop solutions that are scientifically rigorous, locally relevant, and globally transferable. I believe that co-developing solutions through stakeholder partnerships and international collaboration is essential for advancing sustainable nitrogen management and building more sustainable FEW systems.
-        </p>
-
-      </div>
-    </section>
-
   </main>
 
-  <footer>
-    © 2026 Yanyu Wang · Environmental Scientist · Sustainable Agriculture & Food Systems
-  </footer>
-
+  <footer>© 2026 Yanyu Wang · Environmental Scientist · Sustainable Agriculture &amp; Food Systems</footer>
 </body>
 </html>
