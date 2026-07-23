@@ -129,8 +129,8 @@
 
     .news-entry {
       position: relative;
-      padding: 0 0 72px;
-      margin: 0 0 72px;
+      padding: 0 0 60px;
+      margin: 0 0 60px;
       border-bottom: 1px solid var(--border);
     }
 
@@ -147,6 +147,35 @@
 
     .news-top.no-feature {
       grid-template-columns: 1fr;
+    }
+
+    .news-top.no-feature > div {
+      max-width: 960px;
+    }
+
+    .news-top.no-feature p {
+      max-width: 900px;
+    }
+
+    .news-entry.text-only {
+      padding-bottom: 46px;
+      margin-bottom: 46px;
+    }
+
+    .news-entry.text-only .news-top {
+      display: block;
+    }
+
+    .news-entry.text-only .news-top > div {
+      max-width: 900px;
+    }
+
+    .news-entry.text-only p {
+      max-width: 820px;
+    }
+
+    .year-group:last-child {
+      margin-bottom: 18px;
     }
 
     .date {
@@ -261,7 +290,18 @@
       grid-template-columns: 1fr 1fr;
     }
 
-    .two-photo-gallery img,
+    .two-photo-gallery {
+      max-width: 960px;
+      gap: 26px;
+    }
+
+    .two-photo-gallery img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
     .field-media img {
       height: 360px;
     }
@@ -386,8 +426,13 @@
       }
 
       .news-entry {
-        padding-bottom: 54px;
-        margin-bottom: 54px;
+        padding-bottom: 50px;
+        margin-bottom: 50px;
+      }
+
+      .news-entry.text-only {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
       }
 
       h2 {
@@ -640,7 +685,7 @@
       </article>
 
       <!-- March 2025 -->
-      <article class="news-entry">
+      <article class="news-entry text-only">
         <div class="news-top no-feature">
 
           <div>
