@@ -101,7 +101,8 @@
     .research-list {
       display: flex;
       flex-direction: column;
-      gap: 112px;
+      gap: 118px;
+      counter-reset: research-section;
     }
 
     .research-section {
@@ -109,6 +110,17 @@
       grid-template-columns: 52% 48%;
       gap: 40px;
       align-items: start;
+
+      position: relative;
+      padding-top: 46px;
+      border-top: 1px solid #e7ece6;
+
+      counter-increment: research-section;
+    }
+
+    .research-section:first-child {
+      padding-top: 0;
+      border-top: none;
     }
 
     .research-section.reverse .research-image-wrap {
@@ -163,8 +175,19 @@
        RESEARCH TEXT
     ================================================== */
 
+    .research-copy::before {
+      content: counter(research-section, decimal-leading-zero);
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      line-height: 1;
+    }
+
     .research-copy h2 {
-      margin: 0 0 22px;
+      margin: 0 0 24px;
       color: var(--text-dark);
       font-size: 31px;
       line-height: 1.25;
@@ -217,6 +240,7 @@
       .research-section {
         grid-template-columns: 1fr;
         gap: 32px;
+        padding-top: 38px;
       }
 
       .research-section.reverse .research-image-wrap,
@@ -259,7 +283,12 @@
       }
 
       .research-list {
-        gap: 72px;
+        gap: 78px;
+      }
+
+      .research-copy::before {
+        margin-bottom: 10px;
+        font-size: 13px;
       }
 
       .research-copy h2 {
@@ -321,7 +350,7 @@
             <strong>Nitrogen budget for the contiguous United States in 2022.</strong>
             Yanyu Wang, Eric A. Davidson, Baojing Gu, William C. Dennison,
             Luis Lassaletta, and Xin Zhang.
-           Proceedings of the National Academy of Sciences,
+           Proceedings of the National Academy of Sciences (PNAS),
             in review.
           </figcaption>
         </figure>
