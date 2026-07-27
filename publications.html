@@ -148,7 +148,9 @@
       color: var(--text-dark);
       text-decoration: none;
 
-      transition: color 0.2s ease;
+      transition:
+        color 0.2s ease,
+        text-decoration-color 0.2s ease;
     }
 
     h2 a:hover {
@@ -175,11 +177,24 @@
     }
 
     .note {
-      margin-top: 10px;
+      margin-top: 9px;
 
-      color: #334155;
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.6;
+    }
+
+    .note a {
+      color: var(--green);
+      font-weight: 500;
+      text-decoration: none;
+
+      transition: color 0.2s ease;
+    }
+
+    .note a:hover {
+      color: var(--green-dark);
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
 
     /* ==================================================
@@ -226,11 +241,6 @@
         font-size: 44px;
       }
 
-      .subtitle {
-        font-size: 18px;
-        margin-bottom: 42px;
-      }
-
       h2 {
         font-size: 21px;
       }
@@ -260,10 +270,6 @@
 
       h1 {
         font-size: 38px;
-      }
-
-      .subtitle {
-        font-size: 17px;
       }
 
       .pub-item {
@@ -301,73 +307,73 @@
 
     <section class="publications-list" aria-label="Publication list">
 
+      <!-- ======================= 2026 ======================= -->
+
       <article class="pub-item">
- <!-- ======================= 2026 ======================= -->
+        <span class="year">2026</span>
 
-<article class="pub-item">
-  <span class="year">2026</span>
+        <h2>
+          <a
+            href="https://doi.org/10.48130/nc-0026-0011"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Shifting U.S.–China trade from feed to food reduces global agricultural nitrogen loss and greenhouse gas emissions
+          </a>
+        </h2>
 
-  <h2>
-    <a
-      href="https://doi.org/10.48130/nc-0026-0011"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Shifting U.S.–China trade from feed to food reduces global agricultural nitrogen loss and greenhouse gas emissions
-    </a>
-  </h2>
+        <div class="authors">
+          <strong>Y. Wang</strong>, B. Gu, X. Zhang
+        </div>
 
-  <div class="authors">
-    <strong>Y. Wang</strong>, B. Gu, X. Zhang
-  </div>
+        <div class="journal">
+          Nitrogen Cycling
+        </div>
 
-  <div class="journal">
-    Nitrogen Cycling
-  </div>
+        <div class="note">
+          <a
+            href="https://doi.org/10.48130/nc-0026-0011"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI: 10.48130/nc-0026-0011
+          </a>
+        </div>
+      </article>
 
-  <div class="note">
-    <a
-      href="https://www.maxapress.com/article/doi/10.48130/nc-0026-0011"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      DOI: 10.48130/nc-0026-0011
-    </a>
-  </div>
-</article>
+      <article class="pub-item">
+        <span class="year">2026</span>
 
+        <h2>
+          <a
+            href="https://doi.org/10.1038/s43016-026-01312-5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            A framework for estimating manure nitrogen balance and recycling potential for current and future conditions in the USA
+          </a>
+        </h2>
 
-<article class="pub-item">
-  <span class="year">2026</span>
+        <div class="authors">
+          <strong>Y. Wang</strong>, X. Zhang, S. Spiegal, E. A. Davidson
+        </div>
 
-  <h2>
-    <a
-      href="https://doi.org/10.1038/s43016-026-01312-5"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      A framework for estimating manure nitrogen balance and recycling potential for current and future conditions in the USA
-    </a>
-  </h2>
+        <div class="journal">
+          Nature Food
+        </div>
 
-  <div class="authors">
-    <strong>Y. Wang</strong>, X. Zhang, S. Spiegal, E. A. Davidson
-  </div>
+        <div class="note">
+          <a
+            href="https://doi.org/10.1038/s43016-026-01312-5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI: 10.1038/s43016-026-01312-5
+          </a>
+        </div>
+      </article>
 
-  <div class="journal">
-    Nature Food
-  </div>
-
-  <div class="note">
-    <a
-      href="https://doi.org/10.1038/s43016-026-01312-5"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      DOI: 10.1038/s43016-026-01312-5
-    </a>
-  </div>
-</article>
+      <!-- ======================= 2024 ======================= -->
 
       <article class="pub-item">
         <span class="year">2024</span>
@@ -390,7 +396,19 @@
         <div class="journal">
           Nature Reviews Earth &amp; Environment
         </div>
+
+        <div class="note">
+          <a
+            href="https://doi.org/10.1038/s43017-024-00586-2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI: 10.1038/s43017-024-00586-2
+          </a>
+        </div>
       </article>
+
+      <!-- ======================= 2022 ======================= -->
 
       <article class="pub-item">
         <span class="year">2022</span>
@@ -411,6 +429,16 @@
 
         <div class="journal">
           Frontiers in Climate
+        </div>
+
+        <div class="note">
+          <a
+            href="https://doi.org/10.3389/fclim.2021.742320"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI: 10.3389/fclim.2021.742320
+          </a>
         </div>
       </article>
 
@@ -434,6 +462,16 @@
 
         <div class="journal">
           Frontiers of Agricultural Science and Engineering
+        </div>
+
+        <div class="note">
+          <a
+            href="https://doi.org/10.15302/J-FASE-2022458"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI: 10.15302/J-FASE-2022458
+          </a>
         </div>
       </article>
 
